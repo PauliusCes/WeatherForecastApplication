@@ -1,3 +1,3 @@
 package lt.paulius.weatherforecastapplication.repository
 
-data class Current(val temp_c: Double)
+data class Current(val temp_c: Int)
