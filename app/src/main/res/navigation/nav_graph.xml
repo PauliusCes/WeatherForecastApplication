@@ -9,14 +9,23 @@
         android:id="@+id/searchFragment"
         android:name="lt.paulius.weatherforecastapplication.SearchFragment"
         android:label="fragment_search"
-        tools:layout="@layout/fragment_search" >
+        tools:layout="@layout/fragment_search">
         <action
             android:id="@+id/action_searchFragment_to_forecastFragment"
-            app:destination="@id/forecastFragment" />
+            app:destination="@id/forecastFragment" >
+        <argument
+            android:name="currentTemperature"
+            android:defaultValue="5"
+            app:argType="integer" />
+        </action>
     </fragment>
     <fragment
         android:id="@+id/forecastFragment"
         android:name="lt.paulius.weatherforecastapplication.ForecastFragment"
         android:label="fragment_forecast"
         tools:layout="@layout/fragment_forecast" />
+        <argument
+            android:name="currentTemperature"
+            android:defaultValue="5"
+            app:argType="integer" />
 </navigation>
