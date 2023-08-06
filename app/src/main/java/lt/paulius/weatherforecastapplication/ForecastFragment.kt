@@ -21,7 +21,7 @@ class ForecastFragment : Fragment() {
     private var _binding: FragmentForecastBinding? = null
     private val binding get() = _binding!!
     private val viewModel: WeatherViewModel by viewModels()
-    private val args by navArgs<NavGraphArgs>()
+    private val args by navArgs<ForecastFragmentArgs>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,8 +34,19 @@ class ForecastFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val currentTemperature = args.currentTemperature
-        binding.currentTemperature.text = "$currentTemperature°C"
+        val cityName = args.cityName
+        viewModel.fetchWeatherData(cityName)
+
+        lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.RESUMED) {
+                viewModel.fetchWeatherData(cityName).collect { current ->
+                    val temperature = current.current.temp_c.toInt()
+                    val windSpeed = current.current.wind_kph.toInt()
+                    binding.currentTemperature.text = "$temperature°C"
+                    binding.windInformation.text = "$windSpeed km/h"
+                }
+            }
+        }
     }
 
     override fun onDestroy() {

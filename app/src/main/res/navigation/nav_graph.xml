@@ -12,20 +12,36 @@
         tools:layout="@layout/fragment_search">
         <action
             android:id="@+id/action_searchFragment_to_forecastFragment"
-            app:destination="@id/forecastFragment" >
-        <argument
-            android:name="currentTemperature"
-            android:defaultValue="5"
-            app:argType="integer" />
+            app:destination="@id/forecastFragment">
+            <argument
+                android:name="currentTemperature"
+                android:defaultValue="5"
+                app:argType="integer" />
+            <argument
+                android:name="windSpeed"
+                android:defaultValue="0"
+                app:argType="integer" />
+            <argument
+                android:name="cityName"
+                app:argType="string" />
         </action>
     </fragment>
+
     <fragment
         android:id="@+id/forecastFragment"
         android:name="lt.paulius.weatherforecastapplication.ForecastFragment"
         android:label="fragment_forecast"
-        tools:layout="@layout/fragment_forecast" />
+        tools:layout="@layout/fragment_forecast">
         <argument
             android:name="currentTemperature"
             android:defaultValue="5"
             app:argType="integer" />
+        <argument
+            android:name="windSpeed"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="cityName"
+            app:argType="string" />
+    </fragment>
 </navigation>
