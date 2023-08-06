@@ -51,6 +51,7 @@ class ForecastFragment : Fragment() {
                     binding.feelsLike.text = "Feels like $feelsLike°"
                     binding.uv.text = "UV$uv"
                     binding.humidity.text = "$humidity%"
+                    binding.location.text = "$cityName"
                 }
             }
         }
