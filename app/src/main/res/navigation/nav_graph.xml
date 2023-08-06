@@ -36,6 +36,10 @@
                 android:name="uv"
                 android:defaultValue="0"
                 app:argType="integer" />
+            <argument
+                android:name="humidity"
+                android:defaultValue="0"
+                app:argType="integer" />
         </action>
     </fragment>
 
@@ -65,6 +69,10 @@
             app:argType="string" />
         <argument
             android:name="uv"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <argument
+            android:name="humidity"
             android:defaultValue="0"
             app:argType="integer" />
     </fragment>
