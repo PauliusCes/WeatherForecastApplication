@@ -1,5 +1,8 @@
 package lt.paulius.weatherforecastapplication.repository
 
+import com.google.gson.annotations.SerializedName
+
 data class Location(
-    val name: String,
+    @SerializedName("name")
+    val city: String,
 )

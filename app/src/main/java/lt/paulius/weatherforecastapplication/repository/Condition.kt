@@ -1,5 +1,8 @@
 package lt.paulius.weatherforecastapplication.repository
 
+import com.google.gson.annotations.SerializedName
+
 data class Condition(
-    val text: String
+    @SerializedName("text")
+    val weatherCondition: String
 )

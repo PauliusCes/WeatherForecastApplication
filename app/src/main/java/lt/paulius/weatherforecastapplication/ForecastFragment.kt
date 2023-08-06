@@ -10,11 +10,8 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.navArgs
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import lt.paulius.weatherforecastapplication.databinding.FragmentForecastBinding
-import lt.paulius.weatherforecastapplication.databinding.FragmentSearchBinding
 
 class ForecastFragment : Fragment() {
 
@@ -41,14 +38,14 @@ class ForecastFragment : Fragment() {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.RESUMED) {
                 viewModel.weatherData.collect { current ->
                     binding.apply {
-                        currentTemperature.text = "${current.current.temp_c.toInt()}°"
-                        windInformation.text = "${current.current.wind_kph.toInt()} km/h ${current.current.wind_dir}"
-                        feelsLike.text = "Feels like ${current.current.feelslike_c.toInt()}°"
+                        currentTemperature.text = "${current.current.currentTemperature.toInt()}°"
+                        windInformation.text = "${current.current.windSpeed.toInt()} km/h ${current.current.windDirection}"
+                        feelsLike.text = "Feels like ${current.current.feelsLike.toInt()}°"
                         uv.text = "UV${current.current.uv.toInt()}"
                         humidity.text = "${current.current.humidity}%"
                         location.text = cityName
-                        updateTime.text = "Updated ${current.current.last_updated.substring(11, 16)}"
-                        condition.text = current.current.condition.text
+                        updateTime.text = "Updated ${current.current.lastUpdated.substring(11, 16)}"
+                        condition.text = current.current.condition.weatherCondition
                     }
                 }
 //                viewModel.fetchWeatherData(cityName).collect { current ->

@@ -1,12 +1,22 @@
 package lt.paulius.weatherforecastapplication.repository
 
+import com.google.gson.annotations.SerializedName
+
 data class Current(
-    val temp_c: Double,
-    val wind_kph: Double,
-    val feelslike_c: Double,
-    val wind_dir: String,
+    @SerializedName("temp_c")
+    val currentTemperature: Double,
+    @SerializedName("wind_kph")
+    val windSpeed: Double,
+    @SerializedName("feelslike_c")
+    val feelsLike: Double,
+    @SerializedName("wind_dir")
+    val windDirection: String,
+    @SerializedName("uv")
     val uv: Double,
+    @SerializedName("humidity")
     val humidity: Int,
-    val last_updated: String,
+    @SerializedName("last_updated")
+    val lastUpdated: String,
+    @SerializedName("condition")
     val condition: Condition
 )
