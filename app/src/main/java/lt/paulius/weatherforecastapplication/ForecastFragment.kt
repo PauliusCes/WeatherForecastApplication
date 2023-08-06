@@ -48,25 +48,6 @@ class ForecastFragment : Fragment() {
                         condition.text = current.current.condition.weatherCondition
                     }
                 }
-//                viewModel.fetchWeatherData(cityName).collect { current ->
-//                    val temperature = current.current.temp_c.toInt()
-//                    val windSpeed = current.current.wind_kph.toInt()
-//                    val feelsLike = current.current.feelslike_c.toInt()
-//                    val windDir = current.current.wind_dir
-//                    val uv = current.current.uv.toInt()
-//                    val humidity = current.current.humidity
-//                    val updateTime = current.current.last_updated
-//                    val formattedTime = updateTime.substring(11, 16)
-//                    val condition = current.current.condition.text
-//                    binding.currentTemperature.text = "$temperature°"
-//                    binding.windInformation.text = "$windSpeed km/h $windDir"
-//                    binding.feelsLike.text = "Feels like $feelsLike°"
-//                    binding.uv.text = "UV$uv"
-//                    binding.humidity.text = "$humidity%"
-//                    binding.location.text = "$cityName"
-//                    binding.updateTime.text = "Updated $formattedTime"
-//                    binding.condition.text = "$condition"
-//                }
             }
         }
     }
@@ -74,10 +55,5 @@ class ForecastFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
-    }
-
-    companion object {
-        fun newInstance() = ForecastFragment()
-        const val TAG = "forecast_fragment"
     }
 }

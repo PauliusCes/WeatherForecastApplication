@@ -6,12 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.findNavController
-import kotlinx.coroutines.launch
 import lt.paulius.weatherforecastapplication.SearchFragmentDirections.Companion.actionSearchFragmentToForecastFragment
 import lt.paulius.weatherforecastapplication.databinding.FragmentSearchBinding
 
@@ -49,10 +44,5 @@ class SearchFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
-    }
-
-    companion object {
-        fun newInstance() = SearchFragment()
-        const val TAG = "search_fragment"
     }
 }
