@@ -44,6 +44,10 @@
                 android:name="updateTime"
                 android:defaultValue="0"
                 app:argType="string" />
+            <argument
+                android:name="condition"
+                android:defaultValue="0"
+                app:argType="string" />
         </action>
     </fragment>
 
@@ -81,6 +85,10 @@
             app:argType="integer" />
         <argument
             android:name="updateTime"
+            android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="condition"
             android:defaultValue="0"
             app:argType="string" />
     </fragment>

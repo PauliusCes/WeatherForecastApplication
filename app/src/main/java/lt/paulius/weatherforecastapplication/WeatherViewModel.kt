@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.launch
+import lt.paulius.weatherforecastapplication.repository.Condition
 import lt.paulius.weatherforecastapplication.repository.Current
 import lt.paulius.weatherforecastapplication.repository.Location
 import lt.paulius.weatherforecastapplication.repository.Weather
@@ -31,10 +32,10 @@ class WeatherViewModel : ViewModel() {
                         emit(it)
                     }
                 } else {
-                    emit(Weather(Location(""), Current(0.0, 0.0,0.0, "", 0.0, 0, "0")))
+                    emit(Weather(Location(""), Current(0.0, 0.0, 0.0, "", 0.0, 0, "0", Condition(""))))
                 }
             } catch (e: Exception) {
-                emit(Weather(Location(""), Current(0.0, 0.0,0.0, "",0.0, 0, "0")))
+                emit(Weather(Location(""), Current(0.0, 0.0, 0.0, "", 0.0, 0, "0", Condition(""))))
             }
         }
     }

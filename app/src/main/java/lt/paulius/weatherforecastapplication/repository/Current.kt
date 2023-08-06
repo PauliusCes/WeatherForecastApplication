@@ -7,5 +7,6 @@ data class Current(
     val wind_dir: String,
     val uv: Double,
     val humidity: Int,
-    val last_updated: String
+    val last_updated: String,
+    val condition: Condition
 )

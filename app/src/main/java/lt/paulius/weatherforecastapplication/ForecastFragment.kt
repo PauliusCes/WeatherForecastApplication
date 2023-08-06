@@ -48,6 +48,7 @@ class ForecastFragment : Fragment() {
                     val humidity = current.current.humidity
                     val updateTime = current.current.last_updated
                     val formattedTime = updateTime.substring(11, 16)
+                    val condition = current.current.condition.text
                     binding.currentTemperature.text = "$temperature°"
                     binding.windInformation.text = "$windSpeed km/h $windDir"
                     binding.feelsLike.text = "Feels like $feelsLike°"
@@ -55,6 +56,7 @@ class ForecastFragment : Fragment() {
                     binding.humidity.text = "$humidity%"
                     binding.location.text = "$cityName"
                     binding.updateTime.text = "Updated $formattedTime"
+                    binding.condition.text = "$condition"
                 }
             }
         }
