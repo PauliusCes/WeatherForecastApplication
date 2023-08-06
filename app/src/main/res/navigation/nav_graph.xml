@@ -24,6 +24,10 @@
             <argument
                 android:name="cityName"
                 app:argType="string" />
+            <argument
+                android:name="feelsLike"
+                android:defaultValue="0"
+                app:argType="integer" />
         </action>
     </fragment>
 
@@ -43,5 +47,9 @@
         <argument
             android:name="cityName"
             app:argType="string" />
+        <argument
+            android:name="feelsLike"
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
 </navigation>

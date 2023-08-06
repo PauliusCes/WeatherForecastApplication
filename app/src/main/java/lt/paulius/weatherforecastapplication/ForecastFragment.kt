@@ -42,8 +42,10 @@ class ForecastFragment : Fragment() {
                 viewModel.fetchWeatherData(cityName).collect { current ->
                     val temperature = current.current.temp_c.toInt()
                     val windSpeed = current.current.wind_kph.toInt()
-                    binding.currentTemperature.text = "$temperature°C"
+                    val feelsLike = current.current.feelslike_c.toInt()
+                    binding.currentTemperature.text = "$temperature°"
                     binding.windInformation.text = "$windSpeed km/h"
+                    binding.feelsLike.text = "Feels like $feelsLike°"
                 }
             }
         }
