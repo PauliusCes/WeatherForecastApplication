@@ -28,6 +28,10 @@
                 android:name="feelsLike"
                 android:defaultValue="0"
                 app:argType="integer" />
+            <argument
+                android:name="windDirection"
+                android:defaultValue=""
+                app:argType="string" />
         </action>
     </fragment>
 
@@ -51,5 +55,9 @@
             android:name="feelsLike"
             android:defaultValue="0"
             app:argType="integer" />
+        <argument
+            android:name="windDirection"
+            android:defaultValue=""
+            app:argType="string" />
     </fragment>
 </navigation>
