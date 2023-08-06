@@ -46,12 +46,15 @@ class ForecastFragment : Fragment() {
                     val windDir = current.current.wind_dir
                     val uv = current.current.uv.toInt()
                     val humidity = current.current.humidity
+                    val updateTime = current.current.last_updated
+                    val formattedTime = updateTime.substring(11, 16)
                     binding.currentTemperature.text = "$temperature°"
                     binding.windInformation.text = "$windSpeed km/h $windDir"
                     binding.feelsLike.text = "Feels like $feelsLike°"
                     binding.uv.text = "UV$uv"
                     binding.humidity.text = "$humidity%"
                     binding.location.text = "$cityName"
+                    binding.updateTime.text = "Updated $formattedTime"
                 }
             }
         }
