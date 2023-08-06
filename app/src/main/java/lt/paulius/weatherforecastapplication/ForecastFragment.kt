@@ -44,9 +44,11 @@ class ForecastFragment : Fragment() {
                     val windSpeed = current.current.wind_kph.toInt()
                     val feelsLike = current.current.feelslike_c.toInt()
                     val windDir = current.current.wind_dir
+                    val uv = current.current.uv.toInt()
                     binding.currentTemperature.text = "$temperature°"
                     binding.windInformation.text = "$windSpeed km/h $windDir"
                     binding.feelsLike.text = "Feels like $feelsLike°"
+                    binding.uv.text = "UV$uv"
                 }
             }
         }

@@ -32,6 +32,10 @@
                 android:name="windDirection"
                 android:defaultValue=""
                 app:argType="string" />
+            <argument
+                android:name="uv"
+                android:defaultValue="0"
+                app:argType="integer" />
         </action>
     </fragment>
 
@@ -59,5 +63,9 @@
             android:name="windDirection"
             android:defaultValue=""
             app:argType="string" />
+        <argument
+            android:name="uv"
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
 </navigation>

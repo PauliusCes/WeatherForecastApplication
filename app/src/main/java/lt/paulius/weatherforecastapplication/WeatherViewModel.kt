@@ -31,10 +31,10 @@ class WeatherViewModel : ViewModel() {
                         emit(it)
                     }
                 } else {
-                    emit(Weather(Location(""), Current(0.0, 0.0,0.0, "")))
+                    emit(Weather(Location(""), Current(0.0, 0.0,0.0, "", 0.0)))
                 }
             } catch (e: Exception) {
-                emit(Weather(Location(""), Current(0.0, 0.0,0.0, "")))
+                emit(Weather(Location(""), Current(0.0, 0.0,0.0, "",0.0)))
             }
         }
     }
