@@ -38,14 +38,22 @@ class ForecastFragment : Fragment() {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.RESUMED) {
                 viewModel.weatherData.collect { current ->
                     binding.apply {
-                        currentTemperature.text = "${current.current.currentTemperature.toInt()}°"
-                        windInformation.text = "${current.current.windSpeed.toInt()} km/h ${current.current.windDirection}"
-                        feelsLike.text = "Feels like ${current.current.feelsLike.toInt()}°"
-                        uv.text = "UV${current.current.uv.toInt()}"
-                        humidity.text = "${current.current.humidity}%"
-                        location.text = cityName
-                        updateTime.text = "Updated ${current.current.lastUpdated.substring(11, 16)}"
-                        condition.text = current.current.condition.weatherCondition
+                        currentTemperature.text =
+                            "${current.current.currentTemperature.toInt()}°"
+                        windInformation.text =
+                            "${current.current.windSpeed.toInt()} km/h ${current.current.windDirection}"
+                        feelsLike.text =
+                            "Feels like ${current.current.feelsLike.toInt()}°"
+                        uv.text =
+                            "UV${current.current.uv.toInt()}"
+                        humidity.text =
+                            "${current.current.humidity}%"
+                        location.text =
+                            cityName
+                        updateTime.text =
+                            "Updated ${current.current.lastUpdated.substring(11, 16)}"
+                        condition.text =
+                            current.current.condition.weatherCondition
                     }
                 }
             }
