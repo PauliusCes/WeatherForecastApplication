@@ -41,7 +41,7 @@ class ForecastFragment : Fragment() {
                         currentTemperature.text =
                             "${current.current.currentTemperature.toInt()}°"
                         windInformation.text =
-                            "${current.current.windSpeed.toInt()} km/h ${current.current.windDirection}"
+                            "${current.current.windSpeed.toInt()} km/h\n${current.current.windDirection}"
                         feelsLike.text =
                             "Feels like ${current.current.feelsLike.toInt()}°"
                         uv.text =

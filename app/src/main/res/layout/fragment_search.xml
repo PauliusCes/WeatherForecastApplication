@@ -26,12 +26,43 @@
         android:layout_height="wrap_content"
         android:background="@color/transparent"
         android:backgroundTint="@color/white"
-        android:textColor="@color/white"
         android:text="@string/search"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterCityName"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/enterCityName" />
+
+    <ImageView
+        android:id="@+id/weatherIcon1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:src="@drawable/weather_icon_1"
+        app:layout_constraintBottom_toTopOf="@+id/enterCityName"
+        app:layout_constraintEnd_toStartOf="@+id/weatherIcon2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/weatherIcon2" />
+
+    <ImageView
+        android:id="@+id/weatherIcon2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:src="@drawable/weather_icon_2"
+        app:layout_constraintBottom_toTopOf="@+id/enterCityName"
+        app:layout_constraintEnd_toEndOf="@+id/enterCityName"
+        app:layout_constraintStart_toStartOf="@+id/enterCityName" />
+
+    <ImageView
+        android:id="@+id/weatherIcon3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:src="@drawable/weather_icon_3"
+        app:layout_constraintBottom_toTopOf="@+id/enterCityName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/weatherIcon2"
+        app:layout_constraintTop_toTopOf="@+id/weatherIcon2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
