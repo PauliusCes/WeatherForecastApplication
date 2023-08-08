@@ -30,7 +30,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="64dp"
-                android:text="1"
+                android:layout_marginLeft="48dp"
+                android:text="1°"
                 android:textColor="@color/white"
                 android:textSize="172sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +48,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/currentTemperature" />
-
 
             <TextView
                 android:id="@+id/location"
@@ -92,10 +92,10 @@
                 android:text="UV 0"
                 android:textColor="@color/white"
                 android:textSize="24sp"
-
                 app:layout_constraintBottom_toBottomOf="@+id/windInformation"
                 app:layout_constraintEnd_toStartOf="@+id/windInformation"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/windInformation" />
 
             <ImageView
                 android:id="@+id/windImage"
@@ -120,8 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:gravity="center"
-                android:text="0 km/h SW"
+                android:text="0 km/h\nSW"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp"
@@ -136,10 +135,10 @@
                 android:text="1%"
                 android:textColor="@color/white"
                 android:textSize="24sp"
-
                 app:layout_constraintBottom_toBottomOf="@+id/windInformation"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/windInformation" />
+                app:layout_constraintStart_toEndOf="@+id/windInformation"
+                app:layout_constraintTop_toTopOf="@+id/windInformation" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
