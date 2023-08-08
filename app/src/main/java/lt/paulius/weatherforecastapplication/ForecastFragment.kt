@@ -68,6 +68,9 @@ class ForecastFragment : Fragment() {
 
                         val forecastDays = weather.forecast.forecastOfDay
 
+                        currentHighLow.text =
+                            "H:${forecastDays[0].day.maxTempOfGivenDay.toInt()}/L:${forecastDays[0].day.minTempOfGivenDay.toInt()}"
+
                         if (forecastDays.size >= 4) {
                             updateForecastDay(
                                 forecastDays[1],

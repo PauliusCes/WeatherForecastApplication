@@ -41,6 +41,18 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/currentHighLow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="H:24°/L:15°"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="@+id/condition"
+                app:layout_constraintStart_toStartOf="@+id/condition"
+                app:layout_constraintTop_toBottomOf="@+id/condition" />
+
+            <TextView
                 android:id="@+id/feelsLike"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -130,14 +142,14 @@
                 android:id="@+id/windInformation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
                 android:text="0 km/h\nSW"
                 android:textAlignment="center"
                 android:textColor="@color/white"
+                android:layout_marginTop="24dp"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/condition" />
+                app:layout_constraintTop_toBottomOf="@+id/currentHighLow" />
 
             <TextView
                 android:id="@+id/humidity"
