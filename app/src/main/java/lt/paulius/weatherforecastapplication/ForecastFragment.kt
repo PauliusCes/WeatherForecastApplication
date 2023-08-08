@@ -56,7 +56,7 @@ class ForecastFragment : Fragment() {
                         feelsLike.text =
                             "Feels like ${weather.current.feelsLike.toInt()}°"
                         uv.text =
-                            "UV ${weather.current.uv.toInt()}"
+                            " ${weather.current.uv.toInt()}"
                         humidity.text =
                             "${weather.current.humidity}%"
                         location.text =
