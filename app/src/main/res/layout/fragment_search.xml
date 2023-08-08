@@ -64,5 +64,4 @@
         app:layout_constraintStart_toEndOf="@+id/weatherIcon2"
         app:layout_constraintTop_toTopOf="@+id/weatherIcon2" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
