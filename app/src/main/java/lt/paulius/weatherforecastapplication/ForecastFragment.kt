@@ -1,5 +1,6 @@
 package lt.paulius.weatherforecastapplication
 
+import android.opengl.Visibility
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.navArgs
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import lt.paulius.weatherforecastapplication.databinding.FragmentForecastBinding
 
@@ -31,6 +33,9 @@ class ForecastFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.progressBar.visibility = View.VISIBLE
+        binding.constraintLayout.visibility = View.INVISIBLE
+
         val cityName = args.cityName
         viewModel.fetchWeatherData(cityName)
 
@@ -38,6 +43,11 @@ class ForecastFragment : Fragment() {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.RESUMED) {
                 viewModel.weatherData.collect { current ->
                     binding.apply {
+
+                        delay(1000)
+                        binding.progressBar.visibility = View.INVISIBLE
+                        binding.constraintLayout.visibility = View.VISIBLE
+
                         currentTemperature.text =
                             "${current.current.currentTemperature.toInt()}°"
                         windInformation.text =
@@ -45,7 +55,7 @@ class ForecastFragment : Fragment() {
                         feelsLike.text =
                             "Feels like ${current.current.feelsLike.toInt()}°"
                         uv.text =
-                            "UV${current.current.uv.toInt()}"
+                            "UV ${current.current.uv.toInt()}"
                         humidity.text =
                             "${current.current.humidity}%"
                         location.text =
