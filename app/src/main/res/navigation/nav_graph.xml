@@ -48,6 +48,10 @@
                 android:name="condition"
                 android:defaultValue="0"
                 app:argType="string" />
+            <argument
+                android:name="countryName"
+                android:defaultValue="C"
+                app:argType="string" />
         </action>
     </fragment>
 
@@ -90,6 +94,10 @@
         <argument
             android:name="condition"
             android:defaultValue="0"
+            app:argType="string" />
+        <argument
+            android:name="countryName"
+            android:defaultValue="C"
             app:argType="string" />
     </fragment>
 </navigation>

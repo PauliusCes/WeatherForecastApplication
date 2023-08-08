@@ -1,6 +1,5 @@
 package lt.paulius.weatherforecastapplication
 
-import android.opengl.Visibility
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -59,7 +58,7 @@ class ForecastFragment : Fragment() {
                         humidity.text =
                             "${current.current.humidity}%"
                         location.text =
-                            cityName
+                            "$cityName, ${current.location.country}"
                         updateTime.text =
                             "Updated ${current.current.lastUpdated.substring(11, 16)}"
                         condition.text =
