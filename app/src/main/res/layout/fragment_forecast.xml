@@ -23,14 +23,16 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
 
             <TextView
                 android:id="@+id/currentTemperature"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="64dp"
                 android:layout_marginLeft="48dp"
+                android:layout_marginTop="64dp"
                 android:text="1°"
                 android:textColor="@color/white"
                 android:textSize="172sp"
@@ -55,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="24dp"
-                android:text="City"
+                android:text="City, Country"
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -139,6 +141,122 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/windInformation"
                 app:layout_constraintTop_toTopOf="@+id/windInformation" />
+
+            <TextView
+                android:id="@+id/threeDayForecastView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/_3_days_forecast"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/windInformation" />
+
+            <TextView
+                android:id="@+id/firstDayDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="09/02"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/secondDayDate"
+                app:layout_constraintEnd_toStartOf="@+id/secondDayDate"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/firstDayAvgTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10°"
+                android:textColor="@color/white"
+                android:textSize="36dp"
+                app:layout_constraintEnd_toEndOf="@+id/firstDayDate"
+                app:layout_constraintStart_toStartOf="@+id/firstDayDate"
+                app:layout_constraintTop_toBottomOf="@+id/firstDayDate" />
+
+            <TextView
+                android:id="@+id/firstDayHighLow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15°/9°"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/firstDayAvgTemp"
+                app:layout_constraintStart_toStartOf="@+id/firstDayAvgTemp"
+                app:layout_constraintTop_toBottomOf="@+id/firstDayAvgTemp" />
+
+            <TextView
+                android:id="@+id/secondDayDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="09/03"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/thirdDayDate"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/firstDayDate"
+                app:layout_constraintTop_toBottomOf="@+id/threeDayForecastView" />
+
+            <TextView
+                android:id="@+id/secondDayAvgTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11°"
+                android:textColor="@color/white"
+                android:textSize="36dp"
+                app:layout_constraintEnd_toEndOf="@+id/secondDayDate"
+                app:layout_constraintStart_toStartOf="@+id/secondDayDate"
+                app:layout_constraintTop_toBottomOf="@+id/secondDayDate" />
+
+            <TextView
+                android:id="@+id/secondDayHighLow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="16°/10°"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/secondDayAvgTemp"
+                app:layout_constraintStart_toStartOf="@+id/secondDayAvgTemp"
+                app:layout_constraintTop_toBottomOf="@+id/secondDayAvgTemp" />
+
+            <TextView
+                android:id="@+id/thirdDayDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="09/04"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/secondDayDate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/secondDayDate" />
+
+            <TextView
+                android:id="@+id/thirdDayAvgTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12°"
+                android:textColor="@color/white"
+                android:textSize="36dp"
+                app:layout_constraintEnd_toEndOf="@+id/thirdDayDate"
+                app:layout_constraintStart_toStartOf="@+id/thirdDayDate"
+                app:layout_constraintTop_toBottomOf="@+id/thirdDayDate" />
+
+            <TextView
+                android:id="@+id/thirdDayHighLow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="17°/11°"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/thirdDayAvgTemp"
+                app:layout_constraintStart_toStartOf="@+id/thirdDayAvgTemp"
+                app:layout_constraintTop_toBottomOf="@+id/thirdDayAvgTemp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

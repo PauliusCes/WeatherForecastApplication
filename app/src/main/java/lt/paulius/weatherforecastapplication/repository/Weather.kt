@@ -6,5 +6,7 @@ data class Weather(
     @SerializedName("location")
     val location: Location,
     @SerializedName("current")
-    val current: Current
+    val current: Current,
+    @SerializedName("forecast")
+    val forecast: Forecast
 )
